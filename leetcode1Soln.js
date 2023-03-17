@@ -113,17 +113,47 @@ var maxProduct = function(nums) {
 //https://leetcode.com/problems/richest-customer-wealth/
 
 var maximumWealth = function(accounts) {
-  let count = 0
-  
-  accounts.forEach(function(e){
-      let eachTotal = 0
-  e.forEach(function(el){
-      eachTotal += el
-  } )
-  count = Math.max(count,eachTotal)
-  })
-  
-  return count  
-};
+    let count = 0
+    
+    accounts.forEach(function(e){
+        let eachTotal = 0
+    e.forEach(function(el){
+        eachTotal += el
+    } )
+    count = Math.max(count,eachTotal)
+    })
+    
+    return count  
+  };
 
 // Number 9
+//https://leetcode.com/problems/build-array-from-permutation/
+var buildArray = function(nums) {
+    let b =[]
+    nums.forEach(function(el){
+        b.push(nums[el])
+    })
+    return b
+};
+
+// Number 10
+//https://leetcode.com/problems/running-sum-of-1d-array/
+var runningSum = function(nums) {
+    let b=[]
+   nums.forEach(function(e,i){
+
+       b.push(e+ nums[i-1])
+   })
+   return b
+};
+
+//Number 11
+//https://leetcode.com/problems/shuffle-the-array/
+var shuffle = function(nums, n) {
+    let shuffle1 = []
+    for (i = 0; i< 0.5*nums.length; i++){
+shuffle1.push(nums[i],nums[0.5*nums.length+i])
+
+    }
+   return shuffle1
+};
