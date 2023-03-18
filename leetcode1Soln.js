@@ -139,12 +139,9 @@ var buildArray = function(nums) {
 // Number 10
 //https://leetcode.com/problems/running-sum-of-1d-array/
 var runningSum = function(nums) {
-    let b=[]
-   nums.forEach(function(e,i){
-
-       b.push(e+ nums[i-1])
-   })
-   return b
+   for (i=1;i<nums.length;i++){
+       nums[i] += nums[i-1]
+   }return nums
 };
 
 //Number 11
